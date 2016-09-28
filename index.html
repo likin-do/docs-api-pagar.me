@@ -1,7 +1,11 @@
-<!DOCTYPE html>
-<html>
-<body>
-<h1>Docs Pagar.me</h1>
-<p>Documentação inicial</p>
-</body>
-</html>
+# Dicionário de dados:
+
+**API**: A API do Pagar.me é RESTful e todas as respostas vem em formato JSON, o endpoint para todas as solicitações é o seguinte: https://api.pagar.me/1/ (para cada requisição além do endpoint deve ser passado a rota na URL, além dos parâmetros de requisição)
+
+**API Keys**: são as chaves usadas para qualquer requisição no servidor. Existem dois ambientes de trabalho, o de testes e de produção, para cada ambiente existe um par de chaves (descritas a seguir) que servem para diferentes propósitos:
+* **Chave de API**: Esta chave vai em todas as requisições RESTful, vai existir apenas uma chave, portanto seria importante gravar em um arquivo de configuração.
+* **Chave de criptografia**: Esta chave é enviada nas requisições JavaScript para solicitar a card_hash, também é única.
+
+**card_hash**: Código gerado nas requisições por formulário html, juntamente com um código JavaScript, onde os dados do cartão de crédito são criptografados com uma chave pública requisitada por este formulário ao enviar. Esta card_hash tem uma validade de 5 minutos, após este período o card_hash se torna inválido.
+
+**card_id**: Código gerado a partir do card_hash que pode ser usado para armazenar os dados do cartão para requisições futuras ou compras por um click. O card_id não tem prazo de expiração.
