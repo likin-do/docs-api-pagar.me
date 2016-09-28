@@ -15,6 +15,12 @@
     </ul>
     <p><strong>card_hash</strong>: Código gerado nas requisições por formulário html, juntamente com um código JavaScript, onde os dados do cartão de crédito são criptografados com uma chave pública requisitada por este formulário ao enviar. Esta card_hash tem uma validade de 5 minutos, após este período o card_hash se torna inválido.</p>
     <p><strong>card_id</strong>: Código gerado a partir do card_hash que pode ser usado para armazenar os dados do cartão para requisições futuras ou compras por um click. O card_id não tem prazo de expiração.</p>
+    <hr />
+    <h2>Formulário para gerar o card_hash:</h2>
+    <p>O card_hash deve ser gerado através do formulário html, onde serão mostrados os dados do cartão de forma criptografada, esta chave criptografada é o card_hash e tem validade de 5 minutos. O formulário para gerar o card_hash é este: <a href="https://likin-do.github.io/docs-api-pagar.me/generateCardHash.html">https://likin-do.github.io/docs-api-pagar.me/generateCardHash.html</a>.</p>
+    <h3>Realizando uma transação com cartão de crédito</h3>
+    <p>Todas as requisições devem ser feitas através da URL: https://api.pagar.me/1/transactions</p>
+    <p>Os parâmetros para transação estão neste link aqui: https://docs.pagar.me/api/#criando-uma-transacao</p>
   </div>
 </body>
 </html>
