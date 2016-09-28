@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <title>Cartão de crédito</title>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script type="text/javascript">
 	$(document).ready(function() { // quando o jQuery estiver carregado...
-	    PagarMe.encryption_key = "ek_test_pWy0WAPNa9bwrVYYiRualP7O0cHvu0";
+	    PagarMe.encryption_key = "ek_test_pWy0WAPNa9bwrVYYiRualP7O0cHvu0"; // esta chave eh de testes
 
 	    var form = $("#payment_form");
 
@@ -45,7 +45,7 @@
 	    });
 	});
 </script>
-<script src="https://assets.pagar.me/js/pagarme.min.js"></script>
+<script src="//assets.pagar.me/js/pagarme.min.js"></script>
 </head>
 <body>
 	<form id="payment_form" action="" method="POST">
@@ -55,7 +55,7 @@
 		Ano de expiração: <input type="text" id="card_expiration_year" /><br />
 		Código de segurança: <input type="text" id="card_cvv" /><br />
 		<div id="field_errors"></div><br />
-		<input type="submit"></input>
+		<input type="submit" value="Gerar card_hash">
 	</form>
 </body>
 </html>
