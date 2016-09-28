@@ -1,11 +1,20 @@
-<div id="preview">
-	<h1><a id="Dicionrio_de_dados_0"></a>Dicionário de dados:</h1>
-	<p><strong>API</strong>: A API do <a href="http://Pagar.me">Pagar.me</a> é RESTful e todas as respostas vem em formato JSON, o endpoint para todas as solicitações é o seguinte: <a href="https://api.pagar.me/1/">https://api.pagar.me/1/</a> (para cada requisição além do endpoint deve ser passado a rota na URL, além dos parâmetros de requisição)</p>
-	<p><strong>API Keys</strong>: são as chaves usadas para qualquer requisição no servidor. Existem dois ambientes de trabalho, o de testes e de produção, para cada ambiente existe um par de chaves (descritas a seguir) que servem para diferentes propósitos:</p>
-	<ul>
-		<li><strong>Chave de API</strong>: Esta chave vai em todas as requisições RESTful, vai existir apenas uma chave, portanto seria importante gravar em um arquivo de configuração.</li>
-		<li><strong>Chave de criptografia</strong>: Esta chave é enviada nas requisições JavaScript para solicitar a card_hash, também é única.</li>
-	</ul>
-	<p><strong>card_hash</strong>: Código gerado nas requisições por formulário html, juntamente com um código JavaScript, onde os dados do cartão de crédito são criptografados com uma chave pública requisitada por este formulário ao enviar. Esta card_hash tem uma validade de 5 minutos, após este período o card_hash se torna inválido.</p>
-	<p><strong>card_id</strong>: Código gerado a partir do card_hash que pode ser usado para armazenar os dados do cartão para requisições futuras ou compras por um click. O card_id não tem prazo de expiração.</p>
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Documentação Pagar.me</title>
+</head>
+<body>
+  <div id="preview">
+    <h1><a id="Dicionrio_de_dados_0"></a>Dicionário de dados:</h1>
+    <p><strong>API</strong>: A API do <a href="http://Pagar.me">Pagar.me</a> é RESTful e todas as respostas vem em formato JSON, o endpoint para todas as solicitações é o seguinte: <a href="https://api.pagar.me/1/">https://api.pagar.me/1/</a> (para cada requisição além do endpoint deve ser passado a rota na URL, além dos parâmetros de requisição)</p>
+    <p><strong>API Keys</strong>: são as chaves usadas para qualquer requisição no servidor. Existem dois ambientes de trabalho, o de testes e de produção, para cada ambiente existe um par de chaves (descritas a seguir) que servem para diferentes propósitos:</p>
+    <ul>
+        <li><strong>Chave de API</strong>: Esta chave vai em todas as requisições RESTful, vai existir apenas uma chave, portanto seria importante gravar em um arquivo de configuração.</li>
+        <li><strong>Chave de criptografia</strong>: Esta chave é enviada nas requisições JavaScript para solicitar a card_hash, também é única.</li>
+    </ul>
+    <p><strong>card_hash</strong>: Código gerado nas requisições por formulário html, juntamente com um código JavaScript, onde os dados do cartão de crédito são criptografados com uma chave pública requisitada por este formulário ao enviar. Esta card_hash tem uma validade de 5 minutos, após este período o card_hash se torna inválido.</p>
+    <p><strong>card_id</strong>: Código gerado a partir do card_hash que pode ser usado para armazenar os dados do cartão para requisições futuras ou compras por um click. O card_id não tem prazo de expiração.</p>
+  </div>
+</body>
+</html>
